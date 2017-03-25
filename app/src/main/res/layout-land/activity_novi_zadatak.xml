@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.masa.taskmanager.NoviZadatak">
+
+
+
+
+    <EditText
+        android:layout_width="589dp"
+        android:layout_height="42dp"
+        android:id="@+id/etImeZad"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:hint="@string/ime"
+        android:scrollHorizontally="true"
+        android:textAlignment="center"
+        android:maxLines="1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="-5dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/etOpis"
+        app:layout_constraintTop_toBottomOf="@+id/etImeZad"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:layout_width="594dp"
+        android:id="@+id/layoutVreme"
+        android:layout_height="36dp"
+        tools:layout_editor_absoluteY="42dp"
+        tools:layout_editor_absoluteX="-4dp">
+        <Button
+
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:id="@+id/btnVreme"
+            android:text="@string/period"
+/>
+
+        <TextView
+            android:id="@+id/tvVreme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+           />
+
+        <TextView
+            android:id="@+id/tvDatum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+
+
+        <EditText
+            app:layout_constraintTop_toBottomOf="@+id/layoutVreme"
+            app:layout_constraintBottom_toTopOf="@+id/cbPodsetnik"
+            android:layout_width="579dp"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            android:id="@+id/etOpis"
+            android:layout_height="39dp"
+            android:hint="@string/opis"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="13dp" />
+
+
+    <CheckBox
+        android:id="@+id/cbPodsetnik"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:layout_width="281dp"
+        android:text="@string/podsetnik"
+        android:layout_height="27dp"
+        app:layout_constraintTop_toBottomOf="@+id/etOpis"
+        app:layout_constraintBottom_toTopOf="@+id/layoutBoje"
+        tools:layout_editor_absoluteY="147dp"
+        app:layout_constraintHorizontal_bias="0.499"
+        tools:layout_editor_absoluteX="145dp" />
+<LinearLayout
+    android:layout_width="579dp"
+    android:gravity="bottom"
+    android:layout_height="40dp"
+    android:id="@+id/layoutButtons"
+    app:layout_constraintLeft_toRightOf="parent"
+    app:layout_constraintRight_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/layoutBoje"
+    app:layout_constraintBottom_toBottomOf="parent"
+    tools:layout_editor_absoluteY="234dp"
+    tools:layout_editor_absoluteX="13dp">
+    <Button
+        android:layout_width="wrap_content"
+        android:text="@string/dodaj"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/btnDodaj"
+      />
+
+    <Button
+        android:text="@string/otkazi"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:id="@+id/btnOtkazi"
+        android:layout_height="wrap_content"
+      />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutBoje"
+        android:layout_width="582dp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:layout_height="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/layoutButtons"
+        app:layout_constraintTop_toBottomOf="@+id/cbPodsetnik"
+        tools:layout_editor_absoluteY="189dp"
+        tools:layout_editor_absoluteX="8dp">
+
+    <Button
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/crvena"
+        android:id="@+id/btnCrvena"
+         />
+    <Button
+        android:layout_weight="1"
+        android:backgroundTint="@color/zuta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnZuta" />
+    <Button
+        android:backgroundTint="@color/zelena"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnZelena" />
+</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+
